@@ -1,0 +1,62 @@
+html{
+    background-color:  purple;
+    overflow-x: hidden;
+}
+.relative{
+    height: 100px;
+    width: 150px;
+    background-color: rgb(26, 206, 137);
+    position: relative;
+    left: 20px;
+    border-radius: 20px;
+    box-shadow: 20;
+   
+}
+
+.absolute1{
+    height: 100px;
+    width: 160px;
+    background-color: rgb(223, 203, 23);
+    position: absolute;
+    margin-top: 100px;
+    margin-left: 20px;
+    z-index: 1;
+    opacity: 81%;
+    
+   
+}
+
+.absolute2{
+    height: 100px;
+    width: 160px;
+    background-color: rgb(28, 199, 76);
+    position: absolute;
+    margin-top: 60px;
+
+}
+
+.fixed{
+     height: 100px;
+    width: 160px;
+    background-color: rgb(237, 80, 18);
+    position: fixed;
+    top: 300px;
+    bottom: 0px;
+    right: 0px;
+
+}
+
+.largura {
+    max-width: 500px;
+    background-color: blue;
+    border-radius: 20px;
+    transition: width 2s;
+
+
+}
+
+.largura:hover {
+    opacity: 50%;
+   
+
+}
