@@ -11,24 +11,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 :root {
-  --bg-color: #fff8f6;
+  --bg-color: #fef5f2;
   --text-color: #3f2a2a;
   --second-text-color: #8f716d;
   --light-text-color: #ffffff;
-  --light-gray: #f7e9e5;
+  --light-gray: #fef5f2;
   --primary-color: #6e4533;
-  --secondary-color: #e7c8c3;
+  --secondary-color: #fef5f2;
 
   --ff-sans: "Montserrat", system-ui, sans-serif;
   --fw-base: 500;
   --fw-md: 500;
   --fw-bold: 750;
 
-  --fs-sm: 0.875rem;
+  --fs-sm: 1.rem;
   --fs-base: 1rem;
   --fs-lg: 1.25rem;
   --fs-xl: 1.75rem;
-  --fs-2xl: 2.50rem;
+  --fs-2xl: 5.50rem;
 
   --py-sm: 0.875rem;
   --py-base: 1rem;

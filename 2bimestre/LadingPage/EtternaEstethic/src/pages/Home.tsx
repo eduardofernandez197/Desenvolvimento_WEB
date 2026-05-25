@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
-import logo from "../assets/logo.png";
-import Champion_pente from "../assets/pentes.svg";
+import logoEtterna from "../assets/logo.png";
+import Champion_pente from "../assets/pente.svg";
 import Champion_sombrancelha from "../assets/sombrancelha.svg";
-import Champion_mao from "../assets/mao.svg";
+import Champion_dermatology from "../assets/dermatology.svg";
 import Menu from "../assets/Menu.svg";
 import Close from "../assets/Close.svg";
 import "../styles/header.css";
@@ -11,8 +11,9 @@ import "../styles/hero.css";
 import "../styles/solutions.css";
 import Button from "../components/Button";
 import HeroRectangleOne from "../assets/HeroRectangleOne.png";
-import HeroRectangleTwo from "../assets/HeroRectangleTwo.png";
+import fotomariane from "../assets/mariane.png";
 import "../styles/hero.css";
+import Card from "../components/Card/Card";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -28,12 +29,12 @@ export default function Home() {
     <>
       <header className="container py-sm">
         <nav className="flex items-center justify-between">
-          <img src={logo} alt="Logo Etterna" width={250} height={150} />
+          <img src={logoEtterna} alt="Logo Etterna" width={190} height={190} />
 
           <div className="desktop-only">
             <ul className="flex gap-1">
               <li>
-                <a href="#">Home</a>
+                <a href="#hero">Home</a>
               </li>
               <li>
                 <a href="#solution">Soluções</a>
@@ -65,9 +66,12 @@ export default function Home() {
                 <div className="container flex">
                   <ul>
                     <li>
-                      <a 
-                      onClick={() => setShowMobileMenu(!showMobileMenu)}
-                      href="#">Home</a>
+                      <a
+                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                        href="#"
+                      >
+                        Home
+                      </a>
                     </li>
                     <li>
                       <a
@@ -78,17 +82,28 @@ export default function Home() {
                       </a>
                     </li>
                     <li>
-                      <a 
-                      onClick={() => setShowMobileMenu(!showMobileMenu)}
-                      href="#testimonials">Depoimentos</a>
+                      <a
+                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                        href="#testimonials"
+                      >
+                        Depoimentos
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => setShowMobileMenu(!showMobileMenu)}
-                      href="#pricing">Preços</a>
+                      <a
+                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                        href="#pricing"
+                      >
+                        Preços
+                      </a>
                     </li>
                     <li>
-                      <a onClick={() => setShowMobileMenu(!showMobileMenu)}
-                      href="#contact">Contato</a>
+                      <a
+                        onClick={() => setShowMobileMenu(!showMobileMenu)}
+                        href="#contact"
+                      >
+                        Contato
+                      </a>
                     </li>
                     <li>
                       <a className="reverse-color" href="#">
@@ -123,24 +138,29 @@ export default function Home() {
 
       <section id="hero">
         <span className="desktop-only">
-          <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" />
+          <img
+            src={fotomariane}
+            className="fotomariane"
+            alt="Retangulo um tela inicial"
+            height={360}
+            width={280}
+          />
         </span>
         <img src={HeroRectangleOne} alt="Retangulo dois tela inicial" />
 
         <div className="container content">
           <p className="desktop-only">Bem vindo!</p>
           <h1>
-            Mais do que estética, oferecemos qualidade, sofisticação e
-            resultados que transformam sua autoestima
+            Mais do que estética, oferecemos qualidade, e resultados que
+            transformam sua autoestima
           </h1>
           <p>
             Realce sua beleza com procedimentos de alta qualidade, tecnologia
-            avançada e cuidados pensados para elevar sua autoestima, confiança e
-            bem-estar em cada detalhe.
+            avançada e cuidados, trazendo confiança e bem-estar em cada detalhe.
           </p>
           <div className="flex gap-1">
             <span>
-              <Button text="Cadastre-se" />
+              <Button text="Agende aqui" />
             </span>
             <span className="desktop-only">
               <Button text="Veja mais" secondary />
@@ -152,78 +172,38 @@ export default function Home() {
       <section className="container" id="solution">
         {
           <header>
-            <span>
+            <span className="solution-titles">
               <h2>Soluções</h2>
               <span className="desktop-only">
-                <h2>Sob medida para você</h2>
+                <h2>Por que escolher Etterna Estethic?</h2>
               </span>
             </span>
             <p>
-              Inovação é com a gente! A <strong>DonaFrost </strong>
-              já conquistou diversos clientes, seja você mais um deles, veja
-              tudo que pode ganhar com nossos serviços.
+              Resultados que geram além do esperado, mais do que procedimentos estéticos, a <strong>Etterna Estethic</strong> oferece uma experiência completa de cuidado, confiança e bem-estar.
             </p>
           </header>
         }
 
         <section className="even-columns">
-          <div className="card">
-            <span>
-              <img
-                src={Champion_sombrancelha}
-                alt="ícone campeão"
-                width={64}
-                height={64}
-              />
-            </span>
-            <div>
-              <h3>Produto Vencedor</h3>
-              <p>
-                Ideia matadora, nosso time já ganhou diversos eventos de
-                inovação com nosso produto, entre eles podemos citar o CityFarm
-                da FAG e Startup Garage.
-              </p>
-              <hr />
-            </div>
-          </div>
-          <div className="card">
-            <span>
-              <img
-                src={Champion_pente}
-                alt="ícone campeão"
-                width={64}
-                height={64}
-              />
-            </span>
-            <div>
-              <h3>Produto Vencedor</h3>
-              <p>
-                Ideia matadora, nosso time já ganhou diversos eventos de
-                inovação com nosso produto, entre eles podemos citar o CityFarm
-                da FAG e Startup Garage.
-              </p>
-              <hr />
-            </div>
-          </div>
-          <div className="card">
-            <span>
-              <img
-                src={Champion_mao}
-                alt="ícone campeão"
-                width={64}
-                height={64}
-              />
-            </span>
-            <div>
-              <h3>Produto Vencedor</h3>
-              <p>
-                Ideia matadora, nosso time já ganhou diversos eventos de
-                inovação com nosso produto, entre eles podemos citar o CityFarm
-                da FAG e Startup Garage.
-              </p>
-              <hr />
-            </div>
-          </div>
+          <Card
+            imagem={Champion_sombrancelha}
+            alt="ícone.campeão"
+            titulo="Microagulhamento Estimulante"
+            texto="Estimule a produção natural de colágeno e conquiste sobrancelhas mais definidas, harmoniosas e cheias de personalidade."
+          />
+
+          <Card
+            imagem={Champion_pente}
+            alt="ícone.campeão"
+            titulo="Terapia Capilar com Alta Frequência"
+            texto="A tecnologia da alta frequência auxilia na saúde do couro cabeludo, fortalecendo os fios e estimulando um crescimento mais saudável."
+          />
+          <Card
+            imagem={Champion_dermatology}
+            alt="ícone.campeão"
+            titulo="Tratamentos Dermatológicos"
+            texto="Cuidados especializados para revitalizar, equilibrar e revelar a melhor versão da sua pele com segurança e eficácia com produtos dermatológicamente testados."
+          />
         </section>
       </section>
     </>

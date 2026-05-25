@@ -29,7 +29,8 @@
     display: grid;
 }
 .gap-1 {
-    gap: 1rem;
+    gap: 2rem;
+    list-style-type: none;
 }
 
 .gap-1\.5 {
@@ -51,7 +52,8 @@
     }
 
     .desktop-only {
-        display: initial;
+        display: inline;
+        
     }
 
     .even-columns {

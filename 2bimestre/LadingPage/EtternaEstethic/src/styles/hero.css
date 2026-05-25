@@ -1,7 +1,7 @@
 #hero {
   background: var(--light-gray);
   border-top: 0.125rem solid var(--secondary-color);
-  height: 90vh;
+  height: 70vh;
   display: flex;
 }
 #hero > img {
@@ -20,7 +20,7 @@
   flex-direction: column;
   margin-top: auto;
   text-align: center;
-  gap: 1.75rem;
+  gap: 3rem;
 }
 #hero .content > div {
   width: fit-content;
@@ -38,8 +38,14 @@
 
     > img {
       top: 0;
-      height: 80%;
+      height: 84%;
       padding-left: 55%;
+    }
+
+    .fotomariane {
+      position: relative;
+      top: 230px;
+      left: 10px;
     }
 
     .content p {
@@ -47,11 +53,11 @@
       align-self: center;
     }
     .content {
-      gap: 2rem;
+      gap: 4.5rem;
     }
 
     .content > div :first-child {
-      width: 10.650rem;
+      width: 10.65rem;
     }
     .content p:first-of-type {
       color: var(--primary-color);
