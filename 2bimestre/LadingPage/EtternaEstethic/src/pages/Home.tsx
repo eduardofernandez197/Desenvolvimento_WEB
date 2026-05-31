@@ -6,14 +6,21 @@ import Champion_dermatology from "../assets/dermatology.svg";
 import Menu from "../assets/Menu.svg";
 import Close from "../assets/Close.svg";
 import "../styles/header.css";
-import "../styles/utility.css";
+import "../styles/testimonials.css";
 import "../styles/hero.css";
 import "../styles/solutions.css";
+import "../styles/index.css";
+import "../styles/button.css";
+import "../styles/utility.css";
+
 import Button from "../components/Button";
 import HeroRectangleOne from "../assets/HeroRectangleOne.png";
 import fotomariane from "../assets/mariane.png";
-import "../styles/hero.css";
 import Card from "../components/Card/Card";
+import pessoa1 from "../assets/pessoa1.jpg";
+// import pessoa2 from "../components/pessoa2.jpg";
+// import pessoa3 from "../components/pessoa3.jpg";
+import Star from "../assets/star.svg";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -179,7 +186,9 @@ export default function Home() {
               </span>
             </span>
             <p>
-              Resultados que geram além do esperado, mais do que procedimentos estéticos, a <strong>Etterna Estethic</strong> oferece uma experiência completa de cuidado, confiança e bem-estar.
+              Resultados que geram além do esperado, mais do que procedimentos
+              estéticos, a <strong>Etterna Estethic</strong> oferece uma
+              experiência completa de cuidado, confiança e bem-estar.
             </p>
           </header>
         }
@@ -204,6 +213,183 @@ export default function Home() {
             titulo="Tratamentos Dermatológicos"
             texto="Cuidados especializados para revitalizar, equilibrar e revelar a melhor versão da sua pele com segurança e eficácia com produtos dermatológicamente testados."
           />
+        </section>
+      </section>
+
+      <section id="testimonials">
+        <header>
+          <span>
+            <p className="desktop-only">Conselho de quem conhece</p>
+            <h2>Cada cliente importa!</h2>
+          </span>
+          <p>
+            Quem já pediu sabe da qualidade das nossas receitas, estamos tirando
+            aquela ideia de que comida congelada tem de ser algo sem gosto,
+            acompanhe abaixo os testemunhos de quem já comprou e aprovou.
+          </p>
+        </header>
+        <section className="carousel">
+          <div className="carousel-content">
+            <div className="carousel-card">
+              <img src={pessoa1} alt="Imagem perfil cliente" />
+              <span className="testimony">
+                <p>
+                  Certamente o mercado chinês de eletricos está bombando, só
+                  existe uma coisa melhor do que isso, provar uma boa comida
+                  DonaFrost no almoço.
+                </p>
+              </span>
+              <span className="rating">
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img
+                  src={Star}
+                  alt="ícone estrela sem fundo"
+                  width={20}
+                  height={22}
+                />
+              </span>
+              <span className="names">
+                <p>Ellon Ma</p>
+                <p>CEO BING CHILLING</p>
+              </span>
+            </div>
+            <div className="carousel-card">
+              <img src={pessoa1} alt="Imagem perfil cliente" />
+              <span className="testimony">
+                <p>
+                  Certamente o mercado chinês de eletricos está bombando, só
+                  existe uma coisa melhor do que isso, provar uma boa comida
+                  DonaFrost no almoço.
+                </p>
+              </span>
+              <span className="rating">
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img
+                  src={Star}
+                  alt="ícone estrela sem fundo"
+                  width={20}
+                  height={22}
+                />
+              </span>
+              <span className="names">
+                <p>Ellon Ma</p>
+                <p>CEO BING CHILLING</p>
+              </span>
+            </div>
+            <div className="carousel-card">
+              <img src={pessoa1} alt="Imagem perfil cliente" />
+              <span className="testimony">
+                <p>
+                  Certamente o mercado chinês de eletricos está bombando, só
+                  existe uma coisa melhor do que isso, provar uma boa comida
+                  DonaFrost no almoço.
+                </p>
+              </span>
+              <span className="rating">
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img
+                  src={Star}
+                  alt="ícone estrela sem fundo"
+                  width={20}
+                  height={22}
+                />
+              </span>
+              <span className="names">
+                <p>Ellon Ma</p>
+                <p>CEO BING CHILLING</p>
+              </span>
+            </div>
+          </div>
+          <div className="carousel-content">
+            <div className="carousel-card">
+              <img src={pessoa1} alt="Imagem perfil cliente" />
+              <span className="testimony">
+                <p>
+                  Certamente o mercado chinês de eletricos está bombando, só
+                  existe uma coisa melhor do que isso, provar uma boa comida
+                  DonaFrost no almoço.
+                </p>
+              </span>
+              <span className="rating">
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img
+                  src={Star}
+                  alt="ícone estrela sem fundo"
+                  width={20}
+                  height={22}
+                />
+              </span>
+              <span className="names">
+                <p>Ellon Ma</p>
+                <p>CEO BING CHILLING</p>
+              </span>
+            </div>
+            <div className="carousel-card">
+              <img src={pessoa1} alt="Imagem perfil cliente" />
+              <span className="testimony">
+                <p>
+                  Certamente o mercado chinês de eletricos está bombando, só
+                  existe uma coisa melhor do que isso, provar uma boa comida
+                  DonaFrost no almoço.
+                </p>
+              </span>
+              <span className="rating">
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img
+                  src={Star}
+                  alt="ícone estrela sem fundo"
+                  width={20}
+                  height={22}
+                />
+              </span>
+              <span className="names">
+                <p>Ellon Ma</p>
+                <p>CEO BING CHILLING</p>
+              </span>
+            </div>
+            <div className="carousel-card">
+              <img src={pessoa1} alt="Imagem perfil cliente" />
+              <span className="testimony">
+                <p>
+                  Certamente o mercado chinês de eletricos está bombando, só
+                  existe uma coisa melhor do que isso, provar uma boa comida
+                  DonaFrost no almoço.
+                </p>
+              </span>
+              <span className="rating">
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img src={Star} alt="ícone estrela" width={22} height={20} />
+                <img
+                  src={Star}
+                  alt="ícone estrela sem fundo"
+                  width={20}
+                  height={22}
+                />
+              </span>
+              <span className="names">
+                <p>Ellon Ma</p>
+                <p>CEO BING CHILLING</p>
+              </span>
+            </div>
+          </div>
+          
         </section>
       </section>
     </>
