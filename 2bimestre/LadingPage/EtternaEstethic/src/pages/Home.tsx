@@ -17,11 +17,11 @@ import Button from "../components/Button";
 import HeroRectangleOne from "../assets/HeroRectangleOne.png";
 import fotomariane from "../assets/mariane.png";
 import Card from "../components/Card/Card.tsx";
-import Card from "../components/Card/TestimonialCard.tsx";
+import TestimonialCard from "../components/Card/TestimonialCard.tsx";
 import pessoa1 from "../assets/pessoa1.jpg";
 // import pessoa2 from "../components/pessoa2.jpg";
 // import pessoa3 from "../components/pessoa3.jpg";
-import Star from "../assets/star.svg";
+// import Star from "../assets/star.svg";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -230,7 +230,15 @@ export default function Home() {
           </p>
         </header>
         <section className="carousel">
-          <div className="carousel-content">
+          <TestimonialCard
+            imagemPerfil= {pessoa1}
+            testemunho="muito bom"
+            nome="Eduardo"
+            cargo="mecanico"
+            quantidadeEstrelas={5}
+          />
+
+          {/* <div className="carousel-content">
             <div className="carousel-card">
               <img src={pessoa1} alt="Imagem perfil cliente" />
               <span className="testimony">
@@ -387,10 +395,9 @@ export default function Home() {
               <span className="names">
                 <p>Ellon Ma</p>
                 <p>CEO BING CHILLING</p>
-              </span>
-            </div>
-          </div>
-          
+              </span> */}
+          {/* </div> */}
+          {/* </div> */}
         </section>
       </section>
     </>
