@@ -1,6 +1,6 @@
 #testimonials {
   height: 100vh;
-  background: var(--secundary-color);
+  background: var(--secondary-color);
   display: flex;
   flex-direction: column;
   padding-block: 3rem;
@@ -27,6 +27,7 @@
   .carousel {
     display: flex;
     width: 80%;
+    gap: 1rem;
   }
 
   .carousel:hover {
@@ -54,10 +55,10 @@
     padding: 1.625rem;
     text-align: center;
     gap: 1rem;
-    background-color: rgb(130, 112, 72);
+    background-color: rgb(185, 121, 120, 1);
 
     > img {
-      width: 190px;
+      width: 150px;
       height: 150px;
       border-radius: 100%;
     }
@@ -107,7 +108,7 @@
     }
 
     .carousel-card {
-      min-width: 20rem;
+      min-width: 18rem;
       min-height: 20.875rem;
     }
   }

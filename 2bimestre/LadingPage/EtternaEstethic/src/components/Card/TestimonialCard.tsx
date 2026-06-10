@@ -1,4 +1,5 @@
 import Star from "../../assets/star.svg";
+import StarVazia from "../../assets/starVazia.svg";
 
 type TestimonialCardProps = {
   imagemPerfil: string;
@@ -31,7 +32,7 @@ export default function TestimonialCard(props: TestimonialCardProps) {
         {listaEstrelasVazia.map((item, indice) => (
           <img
             key={`estrela-vazia-${indice}`}
-            src={Star}
+            src={StarVazia}
             alt="Imagem estrela sem fundo"
             width={22}
             height={22}

@@ -18,10 +18,9 @@ import HeroRectangleOne from "../assets/HeroRectangleOne.png";
 import fotomariane from "../assets/mariane.png";
 import Card from "../components/Card/Card.tsx";
 import TestimonialCard from "../components/Card/TestimonialCard.tsx";
-import pessoa1 from "../assets/pessoa1.jpg";
-// import pessoa2 from "../components/pessoa2.jpg";
-// import pessoa3 from "../components/pessoa3.jpg";
-// import Star from "../assets/star.svg";
+import pessoa1 from "../assets/pessoa1.png";
+import pessoa2 from "../assets/pessoa2.png";
+import pessoa3 from "../assets/pessoa3.png";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -230,13 +229,39 @@ export default function Home() {
           </p>
         </header>
         <section className="carousel">
-          <TestimonialCard
-            imagemPerfil= {pessoa1}
-            testemunho="muito bom"
-            nome="Eduardo"
-            cargo="mecanico"
-            quantidadeEstrelas={5}
-          />
+          <div className="carousel-content">
+            <TestimonialCard
+              imagemPerfil={pessoa1}
+              testemunho="muito bom"
+              nome="Eduardo"
+              cargo="mecanico"
+              quantidadeEstrelas={5}
+            />
+
+            <TestimonialCard
+              imagemPerfil={pessoa2}
+              testemunho="muito bom"
+              nome="Eduardo"
+              cargo="mecanico"
+              quantidadeEstrelas={5}
+            />
+
+            <TestimonialCard
+              imagemPerfil={pessoa3}
+              testemunho="muito bom"
+              nome="Eduardo"
+              cargo="mecanico"
+              quantidadeEstrelas={5}
+            />
+
+            <TestimonialCard
+              imagemPerfil={pessoa1}
+              testemunho="muito bom"
+              nome="Eduardo"
+              cargo="mecanico"
+              quantidadeEstrelas={5}
+            />
+          </div>
 
           {/* <div className="carousel-content">
             <div className="carousel-card">
