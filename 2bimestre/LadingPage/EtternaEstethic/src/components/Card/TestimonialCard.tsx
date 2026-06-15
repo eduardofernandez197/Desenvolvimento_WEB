@@ -40,8 +40,8 @@ export default function TestimonialCard(props: TestimonialCardProps) {
         ))}
       </span>
       <span className="names">
-        <p>{props.nome}</p>
-        <p>{props.cargo}</p>
+        <p className="nome">{props.nome}</p>
+        <p className="cargo">{props.cargo}</p>
       </span>
     </div>
   );

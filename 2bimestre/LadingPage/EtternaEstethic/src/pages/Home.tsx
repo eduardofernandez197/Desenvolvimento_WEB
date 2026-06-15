@@ -21,6 +21,9 @@ import TestimonialCard from "../components/Card/TestimonialCard.tsx";
 import pessoa1 from "../assets/pessoa1.png";
 import pessoa2 from "../assets/pessoa2.png";
 import pessoa3 from "../assets/pessoa3.png";
+import pessoa4 from "../assets/pessoa4.png";
+import pessoa5 from "../assets/pessoa5.png";
+import pessoa6 from "../assets/pessoa6.png";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -31,6 +34,51 @@ export default function Home() {
       html.style.overflow = showMobileMenu ? "hidden" : "auto";
     }
   }, [showMobileMenu]);
+
+  const testimonials = [
+    {
+      imagemPerfil: pessoa1,
+      testemunho: "Atendimento excelente, ambiente confortável e resultado acima do esperado.",
+      nome: "Ana Paula",
+      cargo: "Empresária",
+      quantidadeEstrelas: 5,
+    },
+    {
+      imagemPerfil: pessoa2,
+      testemunho: "Fui muito bem atendida e senti segurança durante todo o procedimento.",
+      nome: "Mariana Costa",
+      cargo: "Psicóloga",
+      quantidadeEstrelas: 5,
+    },
+    {
+      imagemPerfil: pessoa3,
+      testemunho: "Profissional cuidadosa, explica tudo com calma e entrega um ótimo resultado.",
+      nome: "Camila Rocha",
+      cargo: "Farmacêutica",
+      quantidadeEstrelas: 5,
+    },
+    {
+      imagemPerfil: pessoa4,
+      testemunho: "Gostei muito do cuidado nos detalhes e da qualidade do atendimento.",
+      nome: "Juliana Martins",
+      cargo: "Arquiteta",
+      quantidadeEstrelas: 5,
+    },
+    {
+      imagemPerfil: pessoa5,
+      testemunho: "Minha autoestima melhorou muito depois do tratamento. Recomendo.",
+      nome: "Beatriz Lima",
+      cargo: "Gerente de Vendas",
+      quantidadeEstrelas: 5,
+    },
+    {
+      imagemPerfil: pessoa6,
+      testemunho: "Ambiente limpo, atendimento pontual e resultado muito natural.",
+      nome: "Fernanda Alves",
+      cargo: "Advogada",
+      quantidadeEstrelas: 5,
+    },
+  ];
 
   return (
     <>
@@ -219,48 +267,27 @@ export default function Home() {
       <section id="testimonials">
         <header>
           <span>
-            <p className="desktop-only">Conselho de quem conhece</p>
+            <p className="desktop-only">Opinião de quem já viveu a experiência</p>
             <h2>Cada cliente importa!</h2>
           </span>
           <p>
-            Quem já pediu sabe da qualidade das nossas receitas, estamos tirando
-            aquela ideia de que comida congelada tem de ser algo sem gosto,
-            acompanhe abaixo os testemunhos de quem já comprou e aprovou.
+             Quem já realizou nossos procedimentos conhece a <strong>qualidade</strong> do nosso atendimento.
+  Cuidamos de cada detalhe para entregar resultados naturais, <strong>seguros</strong> e <strong>alinhados</strong>
+  com a sua beleza. Acompanhe abaixo os depoimentos de quem já confiou e aprovou.
           </p>
         </header>
         <section className="carousel">
           <div className="carousel-content">
-            <TestimonialCard
-              imagemPerfil={pessoa1}
-              testemunho="muito bom"
-              nome="Eduardo"
-              cargo="mecanico"
-              quantidadeEstrelas={5}
-            />
-
-            <TestimonialCard
-              imagemPerfil={pessoa2}
-              testemunho="muito bom"
-              nome="Eduardo"
-              cargo="mecanico"
-              quantidadeEstrelas={5}
-            />
-
-            <TestimonialCard
-              imagemPerfil={pessoa3}
-              testemunho="muito bom"
-              nome="Eduardo"
-              cargo="mecanico"
-              quantidadeEstrelas={5}
-            />
-
-            <TestimonialCard
-              imagemPerfil={pessoa1}
-              testemunho="muito bom"
-              nome="Eduardo"
-              cargo="mecanico"
-              quantidadeEstrelas={5}
-            />
+            {[...testimonials, ...testimonials].map((testimonial, index) => (
+              <TestimonialCard
+                key={index}
+                imagemPerfil={testimonial.imagemPerfil}
+                testemunho={testimonial.testemunho}
+                nome={testimonial.nome}
+                cargo={testimonial.cargo}
+                quantidadeEstrelas={testimonial.quantidadeEstrelas}
+              />
+            ))}
           </div>
 
           {/* <div className="carousel-content">
