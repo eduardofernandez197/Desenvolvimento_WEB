@@ -12,11 +12,13 @@ import "../styles/solutions.css";
 import "../styles/index.css";
 import "../styles/button.css";
 import "../styles/utility.css";
+import "../styles/recaptcha.css";
 
 import Button from "../components/Button";
 import HeroRectangleOne from "../assets/HeroRectangleOne.png";
 import fotomariane from "../assets/mariane.png";
 import Card from "../components/Card/Card.tsx";
+import Recaptcha from "../components/Recaptcha/Recaptcha.tsx";
 import TestimonialCard from "../components/Card/TestimonialCard.tsx";
 import pessoa1 from "../assets/pessoa1.png";
 import pessoa2 from "../assets/pessoa2.png";
@@ -38,42 +40,48 @@ export default function Home() {
   const testimonials = [
     {
       imagemPerfil: pessoa1,
-      testemunho: "Atendimento excelente, ambiente confortável e resultado acima do esperado.",
+      testemunho:
+        "Atendimento excelente, ambiente confortável e resultado acima do esperado.",
       nome: "Ana Paula",
       cargo: "Empresária",
       quantidadeEstrelas: 5,
     },
     {
       imagemPerfil: pessoa2,
-      testemunho: "Fui muito bem atendida e senti segurança durante todo o procedimento.",
+      testemunho:
+        "Fui muito bem atendida e senti segurança durante todo o procedimento.",
       nome: "Mariana Costa",
       cargo: "Psicóloga",
       quantidadeEstrelas: 5,
     },
     {
       imagemPerfil: pessoa3,
-      testemunho: "Profissional cuidadosa, explica tudo com calma e entrega um ótimo resultado.",
+      testemunho:
+        "Profissional cuidadosa, explica tudo com calma e entrega um ótimo resultado.",
       nome: "Camila Rocha",
       cargo: "Farmacêutica",
       quantidadeEstrelas: 5,
     },
     {
       imagemPerfil: pessoa4,
-      testemunho: "Gostei muito do cuidado nos detalhes e da qualidade do atendimento.",
+      testemunho:
+        "Gostei muito do cuidado nos detalhes e da qualidade do atendimento.",
       nome: "Juliana Martins",
       cargo: "Arquiteta",
       quantidadeEstrelas: 5,
     },
     {
       imagemPerfil: pessoa5,
-      testemunho: "Minha autoestima melhorou muito depois do tratamento. Recomendo.",
+      testemunho:
+        "Minha autoestima melhorou muito depois do tratamento. Recomendo.",
       nome: "Beatriz Lima",
       cargo: "Gerente de Vendas",
       quantidadeEstrelas: 5,
     },
     {
       imagemPerfil: pessoa6,
-      testemunho: "Ambiente limpo, atendimento pontual e resultado muito natural.",
+      testemunho:
+        "Ambiente limpo, atendimento pontual e resultado muito natural.",
       nome: "Fernanda Alves",
       cargo: "Advogada",
       quantidadeEstrelas: 5,
@@ -267,13 +275,18 @@ export default function Home() {
       <section id="testimonials">
         <header>
           <span>
-            <p className="desktop-only">Opinião de quem já viveu a experiência</p>
+            <p className="desktop-only">
+              Opinião de quem já viveu a experiência
+            </p>
             <h2>Cada cliente importa!</h2>
           </span>
           <p>
-             Quem já realizou nossos procedimentos conhece a <strong>qualidade</strong> do nosso atendimento.
-  Cuidamos de cada detalhe para entregar resultados naturais, <strong>seguros</strong> e <strong>alinhados</strong>
-  com a sua beleza. Acompanhe abaixo os depoimentos de quem já confiou e aprovou.
+            Quem já realizou nossos procedimentos conhece a{" "}
+            <strong>qualidade</strong> do nosso atendimento. Cuidamos de cada
+            detalhe para entregar resultados naturais, <strong>seguros</strong>{" "}
+            e <strong>alinhados</strong>
+            com a sua beleza. Acompanhe abaixo os depoimentos de quem já confiou
+            e aprovou.
           </p>
         </header>
         <section className="carousel">
@@ -289,168 +302,18 @@ export default function Home() {
               />
             ))}
           </div>
-
-          {/* <div className="carousel-content">
-            <div className="carousel-card">
-              <img src={pessoa1} alt="Imagem perfil cliente" />
-              <span className="testimony">
-                <p>
-                  Certamente o mercado chinês de eletricos está bombando, só
-                  existe uma coisa melhor do que isso, provar uma boa comida
-                  DonaFrost no almoço.
-                </p>
-              </span>
-              <span className="rating">
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img
-                  src={Star}
-                  alt="ícone estrela sem fundo"
-                  width={20}
-                  height={22}
-                />
-              </span>
-              <span className="names">
-                <p>Ellon Ma</p>
-                <p>CEO BING CHILLING</p>
-              </span>
-            </div>
-            <div className="carousel-card">
-              <img src={pessoa1} alt="Imagem perfil cliente" />
-              <span className="testimony">
-                <p>
-                  Certamente o mercado chinês de eletricos está bombando, só
-                  existe uma coisa melhor do que isso, provar uma boa comida
-                  DonaFrost no almoço.
-                </p>
-              </span>
-              <span className="rating">
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img
-                  src={Star}
-                  alt="ícone estrela sem fundo"
-                  width={20}
-                  height={22}
-                />
-              </span>
-              <span className="names">
-                <p>Ellon Ma</p>
-                <p>CEO BING CHILLING</p>
-              </span>
-            </div>
-            <div className="carousel-card">
-              <img src={pessoa1} alt="Imagem perfil cliente" />
-              <span className="testimony">
-                <p>
-                  Certamente o mercado chinês de eletricos está bombando, só
-                  existe uma coisa melhor do que isso, provar uma boa comida
-                  DonaFrost no almoço.
-                </p>
-              </span>
-              <span className="rating">
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img
-                  src={Star}
-                  alt="ícone estrela sem fundo"
-                  width={20}
-                  height={22}
-                />
-              </span>
-              <span className="names">
-                <p>Ellon Ma</p>
-                <p>CEO BING CHILLING</p>
-              </span>
-            </div>
-          </div>
-          <div className="carousel-content">
-            <div className="carousel-card">
-              <img src={pessoa1} alt="Imagem perfil cliente" />
-              <span className="testimony">
-                <p>
-                  Certamente o mercado chinês de eletricos está bombando, só
-                  existe uma coisa melhor do que isso, provar uma boa comida
-                  DonaFrost no almoço.
-                </p>
-              </span>
-              <span className="rating">
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img
-                  src={Star}
-                  alt="ícone estrela sem fundo"
-                  width={20}
-                  height={22}
-                />
-              </span>
-              <span className="names">
-                <p>Ellon Ma</p>
-                <p>CEO BING CHILLING</p>
-              </span>
-            </div>
-            <div className="carousel-card">
-              <img src={pessoa1} alt="Imagem perfil cliente" />
-              <span className="testimony">
-                <p>
-                  Certamente o mercado chinês de eletricos está bombando, só
-                  existe uma coisa melhor do que isso, provar uma boa comida
-                  DonaFrost no almoço.
-                </p>
-              </span>
-              <span className="rating">
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img
-                  src={Star}
-                  alt="ícone estrela sem fundo"
-                  width={20}
-                  height={22}
-                />
-              </span>
-              <span className="names">
-                <p>Ellon Ma</p>
-                <p>CEO BING CHILLING</p>
-              </span>
-            </div>
-            <div className="carousel-card">
-              <img src={pessoa1} alt="Imagem perfil cliente" />
-              <span className="testimony">
-                <p>
-                  Certamente o mercado chinês de eletricos está bombando, só
-                  existe uma coisa melhor do que isso, provar uma boa comida
-                  DonaFrost no almoço.
-                </p>
-              </span>
-              <span className="rating">
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img src={Star} alt="ícone estrela" width={22} height={20} />
-                <img
-                  src={Star}
-                  alt="ícone estrela sem fundo"
-                  width={20}
-                  height={22}
-                />
-              </span>
-              <span className="names">
-                <p>Ellon Ma</p>
-                <p>CEO BING CHILLING</p>
-              </span> */}
-          {/* </div> */}
-          {/* </div> */}
         </section>
+        {/* continuar daqui */}
+      </section>
+
+
+            {/* daqui pra baixo recaptcha */}
+      <section id="contact" className="container">
+        <header>
+          <h2>Entre em contato</h2>
+          <p>Preencha os dados abaixo para falar conosco.</p>
+        </header>
+        <Recaptcha />
       </section>
     </>
   );
