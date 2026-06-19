@@ -29,7 +29,7 @@ export default function TestimonialCard(props: TestimonialCardProps) {
             height={22}
           />
         ))}
-        {listaEstrelasVazia.map((item, indice) => (
+        {listaEstrelasVazia.map(( indice) => (
           <img
             key={`estrela-vazia-${indice}`}
             src={StarVazia}
