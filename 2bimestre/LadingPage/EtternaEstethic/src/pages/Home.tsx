@@ -315,44 +315,50 @@ export default function Home() {
         </header>
         <section className="even-columns gap-1.5">
           <PricingCard
-            titulo="Básico"
-            descricao="Você tem direito a uma prova das comidas DonaFrost."
-            preco="Grátis"
-            beneficioUm="Retire na loja"
-            beneficioDois="Apenas 1 por CPF"
-            beneficioDoisEmLista
-            secondary
+            titulo="Limpeza de Pele"
+            compact
+            descricao="Experiência completa de limpeza, tratamento, revitalização e relaxamento facial."
+            preco="R$ 120,00"
+            beneficioUm="Higienização profunda e extração"
+            beneficioDois="Finalização com alta frequência"
+            beneficioTres="Ritual de massagem facial relaxante inclusa"
+            premium
           />
           <PricingCard
-            titulo="Premium"
-            descricao="Para quem precisa de uma marmita diária, muito saborosa."
-            preco="R$ 89,90"
-            periodo="/mês"
-            bonus="1º MÊS COM DESCONTO"
-            beneficioUm="2 Entregas"
-            beneficioDois="5 Refeições por semana"
-            beneficioTres="2 Sucos por semana"
+            titulo="Microagulhamento"
+            descricao="Para renovação da pele, estímulo de colágeno e melhora da textura."
+            preco="R$ 150,00"
+            periodo="/sessão"
+            bonus="DIFERENCIAL"
+            beneficioUm="Estimula colágeno e elastina"
+            beneficioDois="Auxilia em manchas e cicatrizes"
+            beneficioTres="Melhora textura e firmeza da pele"
             premium
           />
-            <PricingCard
-            titulo="Premium"
-            descricao="Para quem precisa de uma marmita diária, muito saborosa."
-            preco="R$ 89,90"
-            periodo="/mês"
-            bonus="1º MÊS COM DESCONTO"
-            beneficioUm="2 Entregas"
-            beneficioDois="5 Refeições por semana"
-            beneficioTres="2 Sucos por semana"
+
+          <PricingCard
+            titulo="Spa Revitalização Facial"
+            compact
+            descricao="Protocolo exclusivo para restaurar hidratação, luminosidade e vitalidade da pele."
+            preco="R$ 169,99"
+            beneficioUm="Hidratação intensiva e nutrição profunda"
+            beneficioDois="Pele mais viçosa, luminosa e revitalizada"
+            beneficioTres="Ritual relaxante para bem-estar facial"
             premium
           />
-       
         </section>
       </section>
       {/* daqui pra baixo recaptcha */}
       <section id="contact" className="container">
         <header>
-          <h2>Entre em contato</h2>
-          <p>Preencha os dados abaixo para falar conosco.</p>
+          <h2 className="titulo">Entre em contato</h2>
+          <p>
+            {" "}
+            <strong> Agende seu horário, tire suas dúvidas ou solicite uma avaliação personalizada.
+  Nossa equipe está pronta para entender sua necessidade e indicar o procedimento
+  mais adequado para cuidar da sua pele, realçar sua beleza natural e proporcionar
+  uma experiência de bem-estar completa.</strong>
+          </p>
         </header>
         <Recaptcha />
       </section>

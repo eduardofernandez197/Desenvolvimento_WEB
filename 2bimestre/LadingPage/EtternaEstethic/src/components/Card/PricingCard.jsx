@@ -3,7 +3,9 @@ import Button from "../Button";
 
 export default function PricingCard(props) {
   return (
-    <div className={`pricing-card${props.premium ? " premium" : ""}`}>
+    <div
+      className={`pricing-card${props.premium ? " premium" : ""}${props.compact ? " compact" : ""}`}
+    >
       {props.bonus && (
         <span className="bonus">
           <p>{props.bonus}</p>
