@@ -13,6 +13,7 @@ import "../styles/index.css";
 import "../styles/button.css";
 import "../styles/utility.css";
 import "../styles/recaptcha.css";
+import "../styles/pricing.css";
 
 import Button from "../components/Button";
 import HeroRectangleOne from "../assets/HeroRectangleOne.png";
@@ -26,6 +27,7 @@ import pessoa3 from "../assets/pessoa3.png";
 import pessoa4 from "../assets/pessoa4.png";
 import pessoa5 from "../assets/pessoa5.png";
 import pessoa6 from "../assets/pessoa6.png";
+import Check from "../assets/check.svg";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -304,62 +306,63 @@ export default function Home() {
           </div>
         </section>
       </section>
-        {/* continuar daqui */}
+      {/* continuar daqui */}
 
-        {/* <section id="pricing" className="container">
+      <section id="pricing" className="container">
         <header>
-        <p className="desktop-only">Planos e preços</p>
-        <h2>Nossos planos</h2>
-          </header>
-         <section className="even-columns gap-1.5">
-
-        <div className="pricing-card">
-             <span className="plan">
-        <h3>Básico</h3>
-        <p>Você tem direito a uma prova das comidas DonaFrost.</p>
-               </span>
-	         <h2>Grátis</h2>
-	           <Button text="Pedir agora" secondary key="free" />
-	             <span className="hr" /><span className="features">
-        <img src={Check} alt="ícone check" width={24} height={24} />
-        <p>Retire na loja</p>
-          </span>
-           <ul className="features">
-        <li>
-	        <img src={Check} alt="ícone check" width={24} height={24} />
-	        <p>Apenas 1 por CPF</p>
-	      </li>
-         </ul>
-      </div>
-           <div className="pricing-card premium">
-	   <span className="bonus">
-		    <p>1º MÊS COM DESCONTO</p>
-	   </span>
-	   <span className="plan">
-        <h3>Premium</h3>
-        <p>Para quem precisa de uma marmita diária, muito saborosa.</p>
-    </span>
-    <span className="price">
-        <h2>R$ 89,90</h2>
-        <p>/mês</p>
-    </span>
-    <Button text="Pedir agora" key="premium" />
-    <span className="hr" />
-    <span className="features">
-        <img src={Check} alt="ícone check" width={24} height={24} />
-        <p>2 Entregas</p>
-     </span>
-      <span className="features">
-        <img src={Check} alt="ícone check" width={24} height={24} />
-        <p>5 Refeições por semana</p>
-      </span>
-     <span className="features">
-        <img src={Check} alt="ícone check" width={24} height={24} />
-        <p>2 Sucos por semana</p>
-     </span>
-     </div>
-      </section> */}
-            {/* daqui pra baixo recaptcha */}
+          <p className="desktop-only">Planos e preços</p>
+          <h2>Nossos planos</h2>
+        </header>
+        <section className="even-columns gap-1.5">
+          <div className="pricing-card">
+            <span className="plan">
+              <h3>Básico</h3>
+              <p>Você tem direito a uma prova das comidas DonaFrost.</p>
+            </span>
+            <h2>Grátis</h2>
+            <Button text="Pedir agora" secondary key="free" />
+            <span className="hr" />
+            <span className="features">
+              <img src={Check} alt="ícone check" width={24} height={24} />
+              <p>Retire na loja</p>
+            </span>
+            <ul className="features">
+              <li>
+                <img src={Check} alt="ícone check" width={24} height={24} />
+                <p>Apenas 1 por CPF</p>
+              </li>
+            </ul>
+          </div>
+          <div className="pricing-card premium">
+            <span className="bonus">
+              <p>1º MÊS COM DESCONTO</p>
+            </span>
+            <span className="plan">
+              <h3>Premium</h3>
+              <p>Para quem precisa de uma marmita diária, muito saborosa.</p>
+            </span>
+            <span className="price">
+              <h2>R$ 89,90</h2>
+              <p>/mês</p>
+            </span>
+            <Button text="Pedir agora" key="premium" />
+            <span className="hr" />
+            <span className="features">
+              <img src={Check} alt="ícone check" width={24} height={24} />
+              <p>2 Entregas</p>
+            </span>
+            <span className="features">
+              <img src={Check} alt="ícone check" width={24} height={24} />
+              <p>5 Refeições por semana</p>
+            </span>
+            <span className="features">
+              <img src={Check} alt="ícone check" width={24} height={24} />
+              <p>2 Sucos por semana</p>
+            </span>
+          </div>
+        </section>
+      </section>
+      {/* daqui pra baixo recaptcha */}
       <section id="contact" className="container">
         <header>
           <h2>Entre em contato</h2>
