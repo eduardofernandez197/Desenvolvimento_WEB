@@ -21,13 +21,13 @@ import fotomariane from "../assets/mariane.png";
 import Card from "../components/Card/Card.tsx";
 import Recaptcha from "../components/Recaptcha/Recaptcha.tsx";
 import TestimonialCard from "../components/Card/TestimonialCard.tsx";
+import PricingCard from "../components/Card/PricingCard.jsx";
 import pessoa1 from "../assets/pessoa1.png";
 import pessoa2 from "../assets/pessoa2.png";
 import pessoa3 from "../assets/pessoa3.png";
 import pessoa4 from "../assets/pessoa4.png";
 import pessoa5 from "../assets/pessoa5.png";
 import pessoa6 from "../assets/pessoa6.png";
-import Check from "../assets/check.svg";
 
 export default function Home() {
   const [showMobileMenu, setShowMobileMenu] = useState(false);
@@ -314,52 +314,38 @@ export default function Home() {
           <h2>Nossos planos</h2>
         </header>
         <section className="even-columns gap-1.5">
-          <div className="pricing-card">
-            <span className="plan">
-              <h3>Básico</h3>
-              <p>Você tem direito a uma prova das comidas DonaFrost.</p>
-            </span>
-            <h2>Grátis</h2>
-            <Button text="Pedir agora" secondary key="free" />
-            <span className="hr" />
-            <span className="features">
-              <img src={Check} alt="ícone check" width={24} height={24} />
-              <p>Retire na loja</p>
-            </span>
-            <ul className="features">
-              <li>
-                <img src={Check} alt="ícone check" width={24} height={24} />
-                <p>Apenas 1 por CPF</p>
-              </li>
-            </ul>
-          </div>
-          <div className="pricing-card premium">
-            <span className="bonus">
-              <p>1º MÊS COM DESCONTO</p>
-            </span>
-            <span className="plan">
-              <h3>Premium</h3>
-              <p>Para quem precisa de uma marmita diária, muito saborosa.</p>
-            </span>
-            <span className="price">
-              <h2>R$ 89,90</h2>
-              <p>/mês</p>
-            </span>
-            <Button text="Pedir agora" key="premium" />
-            <span className="hr" />
-            <span className="features">
-              <img src={Check} alt="ícone check" width={24} height={24} />
-              <p>2 Entregas</p>
-            </span>
-            <span className="features">
-              <img src={Check} alt="ícone check" width={24} height={24} />
-              <p>5 Refeições por semana</p>
-            </span>
-            <span className="features">
-              <img src={Check} alt="ícone check" width={24} height={24} />
-              <p>2 Sucos por semana</p>
-            </span>
-          </div>
+          <PricingCard
+            titulo="Básico"
+            descricao="Você tem direito a uma prova das comidas DonaFrost."
+            preco="Grátis"
+            beneficioUm="Retire na loja"
+            beneficioDois="Apenas 1 por CPF"
+            beneficioDoisEmLista
+            secondary
+          />
+          <PricingCard
+            titulo="Premium"
+            descricao="Para quem precisa de uma marmita diária, muito saborosa."
+            preco="R$ 89,90"
+            periodo="/mês"
+            bonus="1º MÊS COM DESCONTO"
+            beneficioUm="2 Entregas"
+            beneficioDois="5 Refeições por semana"
+            beneficioTres="2 Sucos por semana"
+            premium
+          />
+            <PricingCard
+            titulo="Premium"
+            descricao="Para quem precisa de uma marmita diária, muito saborosa."
+            preco="R$ 89,90"
+            periodo="/mês"
+            bonus="1º MÊS COM DESCONTO"
+            beneficioUm="2 Entregas"
+            beneficioDois="5 Refeições por semana"
+            beneficioTres="2 Sucos por semana"
+            premium
+          />
+       
         </section>
       </section>
       {/* daqui pra baixo recaptcha */}
