@@ -1,17 +1,24 @@
 import { useRef, useState, type FormEvent } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
+type SendStatus = "idle" | "sending" | "success" | "error";
+
 const ContactForm = () => {
-  const [formData, setFormData] = useState({ name: "", email: "" });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isChallengeCompleted, setChallengeCompleted] = useState(false);
-  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState<SendStatus>("idle");
 
   const recaptchaRef = useRef<ReCAPTCHA>(null);
 
   function isValidForm() {
     const isValidFields =
       formData.name.trim() !== "" &&
-      formData.email.trim() !== "";
+      formData.email.trim() !== "" &&
+      formData.message.trim() !== "";
     return isValidFields && isChallengeCompleted;
   }
 
@@ -19,15 +26,32 @@ const ContactForm = () => {
     e.preventDefault();
 
     if (!isValidForm()) {
-      setMessage("Preencha os campos e confirme o reCAPTCHA.");
+      setStatus("error");
       return;
     }
 
-    setMessage("Formulário enviado com sucesso.");
+    setStatus("sending");
 
-    setFormData({ name: "", email: "" });
-    setChallengeCompleted(false);
-    recaptchaRef.current?.reset();
+    try {
+      const response = await fetch("/api/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!response.ok) {
+        throw new Error("Falha ao enviar o formulário.");
+      }
+
+      setStatus("success");
+      setFormData({ name: "", email: "", message: "" });
+      setChallengeCompleted(false);
+      recaptchaRef.current?.reset();
+    } catch {
+      setStatus("error");
+    }
   }
 
   function handleCompleteChallenge(token: string | null) {
@@ -46,10 +70,12 @@ const ContactForm = () => {
           Nome:
           <input
             type="text"
+            name="name"
             value={formData.name}
             onChange={(e) =>
               setFormData({ ...formData, name: e.target.value })
             }
+            required
           />
         </label>
       </div>
@@ -59,10 +85,27 @@ const ContactForm = () => {
           Email:
           <input
             type="email"
+            name="email"
             value={formData.email}
             onChange={(e) =>
               setFormData({ ...formData, email: e.target.value })
             }
+            required
+          />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Mensagem:
+          <textarea
+            name="message"
+            rows={5}
+            value={formData.message}
+            onChange={(e) =>
+              setFormData({ ...formData, message: e.target.value })
+            }
+            required
           />
         </label>
       </div>
@@ -76,9 +119,16 @@ const ContactForm = () => {
         />
       </div>
 
-      <button type="submit">Enviar</button>
+      <button type="submit" disabled={status === "sending"}>
+        {status === "sending" ? "Enviando..." : "Enviar"}
+      </button>
 
-      {message && <p>{message}</p>}
+      <div className="form-status" aria-live="polite">
+        {status === "success" && <p>E-mail enviado com sucesso.</p>}
+        {status === "error" && (
+          <p>Preencha os campos, confirme o reCAPTCHA e tente novamente.</p>
+        )}
+      </div>
     </form>
   );
 };

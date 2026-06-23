@@ -2,10 +2,9 @@ import type { Handler, HandlerEvent } from "@netlify/functions";
 import nodemailer from "nodemailer";
 
 interface ContactPayload {
-  name: string;
   email: string;
   message: string;
-}
+} 
 
 const ALLOWED_ORIGIN = process.env.ALLOWED_ORIGIN ?? "";
 
@@ -46,15 +45,13 @@ const handler: Handler = async (event: HandlerEvent) => {
     };
   }
 
-  const { name, email, message } = payload;
+  const { email, message } = payload;
 
-  if (!name?.trim() || !email?.trim() || !message?.trim()) {
+  if (!email?.trim() || !message?.trim()) {
     return {
       statusCode: 422,
       headers: corsHeaders(origin),
-      body: JSON.stringify({
-        error: "Campos obrigatórios: name, email, message.",
-      }),
+      body: JSON.stringify({ error: "Campos obrigatórios: email, message." }),
     };
   }
 
@@ -84,7 +81,7 @@ const handler: Handler = async (event: HandlerEvent) => {
       replyTo: email,
       to: process.env.CONTACT_EMAIL,
       subject: "[Etterna Estethic] Nova mensagem de contato",
-      text: `Nome: ${name}\nE-mail: ${email}\n\nMensagem:\n${message}`,
+      text: `E-mail: ${email}\n\nMensagem:\n${message}`,
     });
 
     return {
