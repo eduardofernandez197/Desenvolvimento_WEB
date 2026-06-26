@@ -11,16 +11,14 @@ form {
 form div {
   margin-bottom: 1rem;
 }
-#contact{
+#contact {
   margin-top: 4rem;
-  
 }
 
 label {
   display: block;
   font-weight: bold;
   margin-bottom: 0.5rem;
-  
 }
 
 input,
@@ -62,6 +60,6 @@ p {
   margin-top: 1rem;
   color: #333;
 }
-.titulo{
+.titulo {
   text-align: center;
 }

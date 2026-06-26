@@ -354,10 +354,14 @@ export default function Home() {
           <h2 className="titulo">Entre em contato</h2>
           <p>
             {" "}
-            <strong> Agende seu horário, tire suas dúvidas ou solicite uma avaliação personalizada.
-  Nossa equipe está pronta para entender sua necessidade e indicar o procedimento
-  mais adequado para cuidar da sua pele, realçar sua beleza natural e proporcionar
-  uma experiência de bem-estar completa.</strong>
+            <strong>
+              {" "}
+              Agende seu horário, tire suas dúvidas ou solicite uma avaliação
+              personalizada. Nossa equipe está pronta para entender sua
+              necessidade e indicar o procedimento mais adequado para cuidar da
+              sua pele, realçar sua beleza natural e proporcionar uma
+              experiência de bem-estar completa.
+            </strong>
           </p>
         </header>
         <Recaptcha />
