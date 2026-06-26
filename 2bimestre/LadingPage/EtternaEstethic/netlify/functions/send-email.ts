@@ -17,7 +17,6 @@ const corsHeaders = (origin: string) => ({
 
 const handler: Handler = async (event: HandlerEvent) => {
   const origin = event.headers["origin"] ?? "";
-  // ...
 
   if (event.httpMethod === "OPTIONS") {
     return {
@@ -34,12 +33,12 @@ const handler: Handler = async (event: HandlerEvent) => {
       body: JSON.stringify({ error: "Método não permitido." }),
     };
   }
-    let payload: ContactPayload;
+  let payload: ContactPayload;
 
   try {
     payload = JSON.parse(event.body ?? "{}");
   } catch {
-	    return {
+    return {
       statusCode: 400,
       headers: corsHeaders(origin),
       body: JSON.stringify({ error: "Body inválido." }),
@@ -77,8 +76,7 @@ const handler: Handler = async (event: HandlerEvent) => {
     },
   });
 
-
-    try {
+  try {
     await transporter.sendMail({
       from: `<${process.env.SMTP_USER}>`,
       replyTo: email,
@@ -97,12 +95,11 @@ const handler: Handler = async (event: HandlerEvent) => {
     return {
       statusCode: 500,
       headers: corsHeaders(origin),
-      body: JSON.stringify({ error: "Falha ao enviar o e-mail. Tente novamente mais tarde." }),
+      body: JSON.stringify({
+        error: "Falha ao enviar o e-mail. Tente novamente mais tarde.",
+      }),
     };
   }
-
-
-
 };
 
 export { handler };
